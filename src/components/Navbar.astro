@@ -1,0 +1,46 @@
+---
+import { Image } from "@astrojs/image/components";
+import { Sprite } from "astro-icon";
+
+// import logo from '../assets/logo.svg'
+import { Icon } from "astro-icon";
+
+const visible = true;
+---
+
+<nav class="w-full">
+  <!-- <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 md:px-6 md:py-7"> -->
+  <div class="max-w-7xl mx-auto flex flex-col gap-8">
+    <div class="w-full flex justify-between">
+      <a href="#">
+        <img class="h-12 md:h-16" src="src/assets/logo-130px.png" alt="Logo" />
+      </a>
+
+      <button class="lg:hidden">
+        <!-- <i class="fa-solid fa-bars fa-fw text-2xl"></i>         -->
+        <Icon name="mdi:menu" class="h-8 md:h-10" />
+      </button>
+    </div>
+
+    <!-- <ul class="hidden lg:flex flex-row text-sm gap-x-8"> -->
+
+    {
+      visible && (
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a href="">About us</a>
+          </li>
+          <li>
+            <a href="">Our programmes</a>
+          </li>
+          <li>
+            <a href="">News events & press</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      )
+    }
+  </div>
+</nav>
